@@ -33,9 +33,10 @@ namespace atv_inicial
         {
             int op = 0;
             do{
-                Console.WriteLine("Escolha a questão que deseja ");
+                Console.WriteLine("Escolha a questão que deseja 1 - 10");
                 op = Int32.Parse(Console.ReadLine());
-                
+                Console.Clear();
+                Console.WriteLine(op <= 10 &&  op >=1 ? "### Questão " + op + " ###": "Só existe as questões 1 até 10");
                 switch (op)
                 {
                     case 1 : question1(); break;
@@ -53,7 +54,6 @@ namespace atv_inicial
                         break;
                 }
 
-                Console.Clear();
             }while(op != 0);
            
         }
@@ -247,7 +247,7 @@ namespace atv_inicial
             }
 
             Console.WriteLine("Mátricula do menor aluno: " + menor(alunos).matricula);
-            Console.WriteLine("Mátricula do maior aluno: " + maior(alunos).matricula);
+            Console.WriteLine("Mátricula do maior aluno: " + maior(alunos).matricula + "\n");
         }
 
         static double imc(Pessoa p) 
@@ -272,14 +272,11 @@ namespace atv_inicial
 
         static Aluno menor(List<Aluno> alunos)
         {
-            Aluno alunoMenor = new Aluno();
+            Aluno alunoMenor = alunos[0];
             foreach (var aluno in alunos)
             {
-                
                 if (aluno.altura < alunoMenor.altura)
                     alunoMenor = aluno;
-                Console.WriteLine("Aluno: " + aluno.altura);
-                Console.WriteLine("Aluno 2: " + alunoMenor.altura);
             }
             return alunoMenor;
         }
