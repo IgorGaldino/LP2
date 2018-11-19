@@ -1,0 +1,11 @@
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/bin/Debug/netcoreapp2.1/atv-inicial.deps.json
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/bin/Debug/netcoreapp2.1/atv-inicial.runtimeconfig.json
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/bin/Debug/netcoreapp2.1/atv-inicial.runtimeconfig.dev.json
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/bin/Debug/netcoreapp2.1/atv-inicial.dll
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/bin/Debug/netcoreapp2.1/atv-inicial.pdb
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/obj/Debug/netcoreapp2.1/atv-inicial.csprojAssemblyReference.cache
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/obj/Debug/netcoreapp2.1/atv-inicial.csproj.CoreCompileInputs.cache
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/obj/Debug/netcoreapp2.1/atv-inicial.AssemblyInfoInputs.cache
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/obj/Debug/netcoreapp2.1/atv-inicial.AssemblyInfo.cs
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/obj/Debug/netcoreapp2.1/atv-inicial.dll
+/home/igor/Documentos/IFCE/5ºsemestre/LP2/atv-inicial/obj/Debug/netcoreapp2.1/atv-inicial.pdb
