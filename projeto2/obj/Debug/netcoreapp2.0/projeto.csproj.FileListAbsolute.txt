@@ -1,0 +1,11 @@
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\bin\Debug\netcoreapp2.0\projeto.deps.json
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\bin\Debug\netcoreapp2.0\projeto.runtimeconfig.json
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\bin\Debug\netcoreapp2.0\projeto.runtimeconfig.dev.json
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\bin\Debug\netcoreapp2.0\projeto.dll
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\bin\Debug\netcoreapp2.0\projeto.pdb
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\obj\Debug\netcoreapp2.0\projeto.csprojResolveAssemblyReference.cache
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\obj\Debug\netcoreapp2.0\projeto.csproj.CoreCompileInputs.cache
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\obj\Debug\netcoreapp2.0\projeto.AssemblyInfoInputs.cache
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\obj\Debug\netcoreapp2.0\projeto.AssemblyInfo.cs
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\obj\Debug\netcoreapp2.0\projeto.dll
+C:\Users\Alunos\Desktop\lp2\projeto\LP2\projeto2\obj\Debug\netcoreapp2.0\projeto.pdb

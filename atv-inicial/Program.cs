@@ -6,24 +6,24 @@ namespace atv_inicial
 {
     class Aluno
     {
-        public int matricula { get; set; }
-        public double altura { get; set; }
+        public int Matricula { get; set; }
+        public double Altura { get; set; }
     }
 
     class Usuario 
     {
-        public String nome { get; set; }
-        public String email { get; set; }
-        public String telefone { get; set; }
-        public long rg { get; set; }
+        public String Nome { get; set; }
+        public String Email { get; set; }
+        public String Telefone { get; set; }
+        public long Rg { get; set; }
     }
 
     class Pessoa
     {
-        public String nome { get; set; }
-        public int idade { get; set; }
-        public double peso { get; set; }
-        public double altura { get; set; }
+        public String Nome { get; set; }
+        public int Idade { get; set; }
+        public double Peso { get; set; }
+        public double Altura { get; set; }
 
     }
 
@@ -173,15 +173,15 @@ namespace atv_inicial
             Console.WriteLine("RG: ");
             long rg = Int64.Parse(Console.ReadLine());
 
-            Usuario usuario = new Usuario() {nome = nome, email= mail, telefone= fone, rg = rg};
+            Usuario usuario = new Usuario() {Nome = nome, Email = mail, Telefone = fone, Rg = rg};
             //usando a instrução using os recursos são liberados após a conclusão da operação
             // 1: Escreve um linha para o novo arquivo
             using (StreamWriter writer = new StreamWriter("qt8.txt", false))
             {
-                writer.WriteLine("Nome: " + usuario.nome);
-                writer.WriteLine("Email: " + usuario.email);
-                writer.WriteLine("Telefone: " + usuario.telefone);
-                writer.WriteLine("RG: " + usuario.rg);
+                writer.WriteLine("Nome: " + usuario.Nome);
+                writer.WriteLine("Email: " + usuario.Email);
+                writer.WriteLine("Telefone: " + usuario.Telefone);
+                writer.WriteLine("RG: " + usuario.Rg);
             }
             Console.Clear();
             String line;
@@ -216,14 +216,14 @@ namespace atv_inicial
                 Console.WriteLine("Altura: ");
                 double heigth = Double.Parse(Console.ReadLine());
 
-                Pessoa pessoa = new Pessoa() { nome = nome, idade = age, peso = weight, altura = heigth };
+                Pessoa pessoa = new Pessoa() { Nome = nome, Idade = age, Peso = weight, Altura = heigth };
 
                 using (StreamWriter writer = new StreamWriter("qt8.txt", true))
                 {
-                    writer.WriteLine("Nome: " + pessoa.nome);
-                    writer.WriteLine("Idade: " + pessoa.idade);
-                    writer.WriteLine("Peso: " + pessoa.peso);
-                    writer.WriteLine("Altura: " + pessoa.altura);
+                    writer.WriteLine("Nome: " + pessoa.Nome);
+                    writer.WriteLine("Idade: " + pessoa.Idade);
+                    writer.WriteLine("Peso: " + pessoa.Peso);
+                    writer.WriteLine("Altura: " + pessoa.Altura);
                     writer.WriteLine("IMC: " + imc(pessoa));
                 }
             } else 
@@ -241,18 +241,18 @@ namespace atv_inicial
                 int mat = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Informe sua altura: ");
                 double heigth = Double.Parse(Console.ReadLine());
-                Aluno a = new Aluno() { matricula = mat, altura = heigth };
+                Aluno a = new Aluno() { Matricula = mat, Altura = heigth };
                 alunos.Add(a);
                 Console.Clear();
             }
 
-            Console.WriteLine("Mátricula do menor aluno: " + menor(alunos).matricula);
-            Console.WriteLine("Mátricula do maior aluno: " + maior(alunos).matricula + "\n");
+            Console.WriteLine("Mátricula do menor aluno: " + menor(alunos).Matricula);
+            Console.WriteLine("Mátricula do maior aluno: " + maior(alunos).Matricula + "\n");
         }
 
         static double imc(Pessoa p) 
         {
-            return p.peso/(Math.Pow(p.altura, 2));
+            return p.Peso/(Math.Pow(p.Altura, 2));
         }
         static String showNome(String nome)
         {
@@ -264,7 +264,7 @@ namespace atv_inicial
             Aluno alunoMaior = new Aluno();
             foreach (var aluno in alunos)
             {
-                if (aluno.altura > alunoMaior.altura)
+                if (aluno.Altura > alunoMaior.Altura)
                     alunoMaior = aluno;
             }
             return alunoMaior;
@@ -275,7 +275,7 @@ namespace atv_inicial
             Aluno alunoMenor = alunos[0];
             foreach (var aluno in alunos)
             {
-                if (aluno.altura < alunoMenor.altura)
+                if (aluno.Altura < alunoMenor.Altura)
                     alunoMenor = aluno;
             }
             return alunoMenor;
