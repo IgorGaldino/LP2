@@ -1,0 +1,11 @@
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\bin\Debug\netcoreapp2.1\Attividade1POO.deps.json
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\bin\Debug\netcoreapp2.1\Attividade1POO.runtimeconfig.json
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\bin\Debug\netcoreapp2.1\Attividade1POO.runtimeconfig.dev.json
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\bin\Debug\netcoreapp2.1\Attividade1POO.dll
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\bin\Debug\netcoreapp2.1\Attividade1POO.pdb
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\obj\Debug\netcoreapp2.1\Attividade1POO.csprojAssemblyReference.cache
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\obj\Debug\netcoreapp2.1\Attividade1POO.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\obj\Debug\netcoreapp2.1\Attividade1POO.AssemblyInfoInputs.cache
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\obj\Debug\netcoreapp2.1\Attividade1POO.AssemblyInfo.cs
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\obj\Debug\netcoreapp2.1\Attividade1POO.dll
+C:\Users\Pichau\source\repos\Attividade1POO\Attividade1POO\obj\Debug\netcoreapp2.1\Attividade1POO.pdb
