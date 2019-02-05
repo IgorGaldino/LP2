@@ -13,6 +13,8 @@ namespace Atividade2EFCore
         List<Solicitacao> solicitacoes = new List<Solicitacao>();
 
         public int Id { get; set; }
+        public Banco Banco { get; set; }
+        public int BancoId { get; set; }
 
         public List<ContaCorrente> ContasCorrente { get; set; }
         public List<ContaPoupanca> ContasPoupanca { get; set; }

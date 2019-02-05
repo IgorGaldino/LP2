@@ -1,0 +1,11 @@
+/home/igor/Documentos/LP2/crud-pessoa/bin/Debug/netcoreapp2.1/crud-pessoa.deps.json
+/home/igor/Documentos/LP2/crud-pessoa/bin/Debug/netcoreapp2.1/crud-pessoa.runtimeconfig.json
+/home/igor/Documentos/LP2/crud-pessoa/bin/Debug/netcoreapp2.1/crud-pessoa.runtimeconfig.dev.json
+/home/igor/Documentos/LP2/crud-pessoa/bin/Debug/netcoreapp2.1/crud-pessoa.dll
+/home/igor/Documentos/LP2/crud-pessoa/bin/Debug/netcoreapp2.1/crud-pessoa.pdb
+/home/igor/Documentos/LP2/crud-pessoa/obj/Debug/netcoreapp2.1/crud-pessoa.csprojAssemblyReference.cache
+/home/igor/Documentos/LP2/crud-pessoa/obj/Debug/netcoreapp2.1/crud-pessoa.csproj.CoreCompileInputs.cache
+/home/igor/Documentos/LP2/crud-pessoa/obj/Debug/netcoreapp2.1/crud-pessoa.AssemblyInfoInputs.cache
+/home/igor/Documentos/LP2/crud-pessoa/obj/Debug/netcoreapp2.1/crud-pessoa.AssemblyInfo.cs
+/home/igor/Documentos/LP2/crud-pessoa/obj/Debug/netcoreapp2.1/crud-pessoa.dll
+/home/igor/Documentos/LP2/crud-pessoa/obj/Debug/netcoreapp2.1/crud-pessoa.pdb

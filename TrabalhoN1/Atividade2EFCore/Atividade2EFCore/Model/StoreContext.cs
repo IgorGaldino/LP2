@@ -29,5 +29,14 @@ namespace Atividade2EFCore.Model
             optionsBuilder.UseSqlite("Data Source=banco.db");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Agencia>()
+                .HasOne(a => a.Banco)
+                .WithMany(b => b.Agencias)
+                .HasForeignKey(a => a.Banco.id)
+                .HasConstraintName("ForeignKey_Agencia_Banco");
+        }
+
     }
 }
