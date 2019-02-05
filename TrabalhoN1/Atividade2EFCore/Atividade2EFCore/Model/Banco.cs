@@ -9,17 +9,19 @@ namespace Atividade2EFCore
     public class Banco
     {
 
-        List<Agencia> agencias = new List<Agencia>();
-        
+        public Banco()
+        {
+            Agencias = new List<Agencia>();
+        }
         //[Key]
         public int Id { get; set; }
-        public List<Agencia> Agencias { get; }
-
+        public ICollection<Agencia> Agencias { get; set; }
         public void addAgencia(Agencia a)
         {
-            agencias.Add(a);
+            Console.WriteLine("Add Agência!");
+            /*agencias.Add(a);
             Console.WriteLine("Agência " + a.Id + " criada com sucesso!");
-            Console.WriteLine("Numero de agencias: " + agencias.Count + "\n");
+            Console.WriteLine("Numero de agencias: " + agencias.Count + "\n");*/
         }
 
         public Agencia findAgencia(int num)

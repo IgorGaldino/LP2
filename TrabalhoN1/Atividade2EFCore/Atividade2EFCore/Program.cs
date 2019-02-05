@@ -25,7 +25,8 @@ namespace Atividade2EFCore
                 db.SaveChanges();
 
                 Banco banco = new Banco();
-
+                db.Bancos.Add(banco);
+                db.SaveChanges();
                 /*
                     db.Clientes.Add(new Cliente { Nome = "igor" });
                     db.Clientes.Add(new Cliente { Nome = "Zé" });
@@ -41,6 +42,7 @@ namespace Atividade2EFCore
                     if (op == 1)
                     {
                         Agencia agencia = new Agencia();
+                        agencia.Banco = banco;
                         db.Agencias.Add(agencia);  //add agência in banco
                         db.SaveChanges();
                         banco.showIdAgencias();
