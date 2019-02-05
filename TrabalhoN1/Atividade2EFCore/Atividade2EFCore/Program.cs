@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Atividade2EFCore.Model;
 
 namespace Atividade2EFCore
@@ -9,21 +10,29 @@ namespace Atividade2EFCore
 
         static void Main(string[] args)
         {
-            /*
-            int contAgencia = 0;
+            int contCliente = 0;
             int contCCorrente = 0;
             int contCPoupanca = 0;
-            */
+            
             using (var db = new StoreContext())
             {
+                db.Set<Cliente>().RemoveRange(db.Clientes);
+                db.Set<Banco>().RemoveRange(db.Bancos);
+                db.Set<Agencia>().RemoveRange(db.Agencias);
+                db.Set<ContaCorrente>().RemoveRange(db.ContasCorrente);
+                db.Set<ContaPoupanca>().RemoveRange(db.ContasPoupanca);
+                db.Set<Solicitacao>().RemoveRange(db.Solicitacoes);
+                db.SaveChanges();
+
                 Banco banco = new Banco();
-                Cliente cliente = new Cliente { Nome = "Igor" };
-                db.Clientes.Add(cliente);
 
-                var count = db.SaveChanges();
-                Console.WriteLine("{0} records saved to database", count);
+                /*
+                    db.Clientes.Add(new Cliente { Nome = "igor" });
+                    db.Clientes.Add(new Cliente { Nome = "Zé" });
+                    db.SaveChanges();
+                */
 
-                /*while (true)
+                while (true)
                 {
                     //banco.showIdAgencias();
                     menu();
@@ -31,10 +40,11 @@ namespace Atividade2EFCore
 
                     if (op == 1)
                     {
-                        //contAgencia++;
                         Agencia agencia = new Agencia();
-                        agencia.Id = ++contAgencia;
-                        banco.addAgencia(agencia);
+                        db.Agencias.Add(agencia);  //add agência in banco
+                        db.SaveChanges();
+                        banco.showIdAgencias();
+                        //banco.addAgencia(agencia);
 
                     }
                     else if (op == 2)
@@ -45,11 +55,12 @@ namespace Atividade2EFCore
 
                         if (agencia == null)
                         {
-                            Console.WriteLine("Agencia inválida! Tente novamente!");
+                            Console.WriteLine("Agencia inválida! Tente novamente!\n");
                             continue;
                         }
 
                         Cliente cliente = new Cliente();
+                        //cliente.Id = ++contCliente;
                         Console.WriteLine("Informe o nome do cliente: ");
                         string nome = Console.ReadLine();
                         cliente.Nome = nome;
@@ -59,17 +70,21 @@ namespace Atividade2EFCore
                         int tipoConta = int.Parse(Console.ReadLine());
                         if (tipoConta == 1)
                         {
+                            cliente.Id = ++contCliente;
+                            db.Clientes.Add(cliente);   //add cliente in base
                             ContaCorrente cc = new ContaCorrente(cliente.Nome);
-
                             cc.Id = ++contCCorrente;
+                            db.ContasCorrente.Add(cc);  //add Conta Corrente in base
                             agencia.addCCorrente(cc);
 
                         }
                         else if (tipoConta == 2)
                         {
+                            cliente.Id = ++contCliente;
+                            db.Clientes.Add(cliente);   //add cliente in base
                             ContaPoupanca cp = new ContaPoupanca(JUROS, DateTime.Now, cliente.Nome);
-
                             cp.Id = ++contCPoupanca;
+                            db.ContasPoupanca.Add(cp);  //add Conta Poupança in base
                             agencia.addCPoupanca(cp);
 
                         }
@@ -87,7 +102,8 @@ namespace Atividade2EFCore
                     {
                         Console.WriteLine("Opção inválida, tente novamente");
                     }
-                }//Fim do while*/
+                    db.SaveChanges();
+                } //Fim do while
             }
         } //Fim da main
 

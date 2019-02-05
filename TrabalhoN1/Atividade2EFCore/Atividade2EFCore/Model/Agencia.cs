@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace Atividade2EFCore
 {
@@ -10,7 +11,7 @@ namespace Atividade2EFCore
         List<ContaCorrente> contasCorrente = new List<ContaCorrente>();
         List<ContaPoupanca> contasPoupanca = new List<ContaPoupanca>();
         List<Solicitacao> solicitacoes = new List<Solicitacao>();
-        //[Key]
+
         public int Id { get; set; }
 
         public List<ContaCorrente> ContasCorrente { get; set; }

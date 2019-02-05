@@ -24,20 +24,9 @@ namespace Atividade2EFCore.Model
         public DbSet<ContaPoupanca> ContasPoupanca { get; set; }
         public DbSet<Solicitacao> Solicitacoes { get; set; }
 
-        private static IConfigurationRoot _configuration;
-
-        public StoreContext()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
-            _configuration = builder.Build();
-        }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var cnn = (_configuration.GetConnectionString("cnn"));
-            optionsBuilder.UseSqlite(cnn);
+            optionsBuilder.UseSqlite("Data Source=banco.db");
         }
 
     }

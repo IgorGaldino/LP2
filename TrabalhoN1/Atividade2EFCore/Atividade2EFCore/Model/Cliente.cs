@@ -1,12 +1,13 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+//using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Atividade2EFCore
 {
     public class Cliente
     {
-        //[Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
     }
 }

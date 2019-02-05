@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Atividade2EFCore.Model;
+using System.Linq;
 
 namespace Atividade2EFCore
 {
@@ -22,27 +24,44 @@ namespace Atividade2EFCore
 
         public Agencia findAgencia(int num)
         {
-            Agencia agencia = null;
-            foreach (var ag in agencias)
+            using (var db = new StoreContext())
             {
-                if (ag.Id == num)
+                try
                 {
-                    agencia = ag;
+                    var agencia = db.Agencias
+                    .Single(a => a.Id == num);
                     return agencia;
                 }
+                catch (Exception)
+                {
+                    return null;
+                }
+                /*Agencia agencia = null;
+                foreach (var ag in agencias)
+                {
+                    if (ag.Id == num)
+                    {
+                        agencia = ag;
+                        return agencia;
+                    }
+                }
+
+                return null;*/
             }
-            
-            return null;
         }
 
         public void showIdAgencias()
         {
-            Console.WriteLine("Agencias");
-            foreach (var agencia in agencias)
+            using (var db = new StoreContext())
             {
-                Console.WriteLine("Agencia: " + agencia.Id);
+                var agencias = db.Set<Agencia>();
+                Console.WriteLine("\nLista das Agencias\n");
+                foreach (var agencia in agencias)
+                {
+                    Console.WriteLine("Agencia de número: " + agencia.Id);
+                }
+                Console.WriteLine("");
             }
-            Console.WriteLine("");
         }
 
     }
