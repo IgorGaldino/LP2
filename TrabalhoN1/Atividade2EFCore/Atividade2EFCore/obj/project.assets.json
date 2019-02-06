@@ -1472,7 +1472,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
-      "sha512": "H1qCpWBC8Ed4tguTR/qYkbb3F6DI5Su3t8xyFo3/5MzAd8PwPpHzgX8X04KbBxKmk173Pb64x7xMHarczVFQUA==",
+      "sha512": "BnkmTopJ7m+p0/EBshdJmoWroUvMlu+oA+bDvzEWh3WA9rOYdnTZueQ7Ap1oSfUnHnPBnuWae/ED8hHlM/sQxA==",
       "type": "package",
       "path": "microsoft.extensions.configuration.fileextensions/2.2.0",
       "files": [
@@ -1485,7 +1485,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Json/2.2.0": {
-      "sha512": "jUDdmLyFmLf9V3mqnMzSAzAv4QigJ67tZh5Q7HBXeBnESL2UyeesNG6jSBti+b63JpxZf+EDyn+anx3gyrNxug==",
+      "sha512": "CqqFzpFuW9rOWOHI9c3JrGrOOogfLRrGTWVU2AIFkxXRQ/bAg5lL3WabkVEywmTRo58AI3p6sT0ACNy9s279VA==",
       "type": "package",
       "path": "microsoft.extensions.configuration.json/2.2.0",
       "files": [
@@ -1544,7 +1544,7 @@
       ]
     },
     "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
-      "sha512": "EcnaSsPTqx2MGnHrmWOD0ugbuuqVT8iICqSqPzi45V5/MA1LjUNb0kwgcxBGqizV1R+WeBK7/Gw25Jzkyk9bIw==",
+      "sha512": "33vTyijzAVEfbuNFts68R7bW02cJMiw21MFgMBk+XL+thcbv335PVD1+DdMSvN6e5DeAR4OmPSRsKIr86Yk4qg==",
       "type": "package",
       "path": "microsoft.extensions.fileproviders.abstractions/2.2.0",
       "files": [
@@ -1557,7 +1557,7 @@
       ]
     },
     "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
-      "sha512": "tbDHZnBJkjYd9NjlRZ9ondDiv1Te3KYCTW2RWpR1B0e1Z8+EnFRo7qNnHkkSCixLdlPZzhjlX24d/PixQ7w2dA==",
+      "sha512": "Qt6sUa56/XbLxYshrCzwJYhHO9TkVa9Adch1qVqr7PGuLCxRs3K7nGMv3I6msUvAJqiJE33Oexz6KrT4hcUHgA==",
       "type": "package",
       "path": "microsoft.extensions.fileproviders.physical/2.2.0",
       "files": [
@@ -1570,7 +1570,7 @@
       ]
     },
     "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
-      "sha512": "ZSsHZp3PyW6vk37tDEdypjgGlNtpJ0EixBMOfUod2Thx7GtwfFSAQXUQx8a8BN8vfWKGGMbp7jPWdoHx/At4wQ==",
+      "sha512": "WGASE48sldx5PHrmxpmW0qFJ0M0mZXhF9IgdBDTSNmnys7Qfw7xTuHs/nmbA1Wo8Y8XFI7K2cJKf9Ql/nBK4Rw==",
       "type": "package",
       "path": "microsoft.extensions.filesystemglobbing/2.2.0",
       "files": [
@@ -4237,23 +4237,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\igorm\\.nuget\\packages\\": {},
+    "C:\\Users\\Pichau\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igorm\\Documents\\LP2\\TrabalhoN1\\Atividade2EFCore\\Atividade2EFCore\\Atividade2EFCore.csproj",
+      "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\LP2\\TrabalhoN1\\Atividade2EFCore\\Atividade2EFCore\\Atividade2EFCore.csproj",
       "projectName": "Atividade2EFCore",
-      "projectPath": "C:\\Users\\igorm\\Documents\\LP2\\TrabalhoN1\\Atividade2EFCore\\Atividade2EFCore\\Atividade2EFCore.csproj",
-      "packagesPath": "C:\\Users\\igorm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igorm\\Documents\\LP2\\TrabalhoN1\\Atividade2EFCore\\Atividade2EFCore\\obj\\",
+      "projectPath": "C:\\Users\\Pichau\\source\\repos\\LP2\\TrabalhoN1\\Atividade2EFCore\\Atividade2EFCore\\Atividade2EFCore.csproj",
+      "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pichau\\source\\repos\\LP2\\TrabalhoN1\\Atividade2EFCore\\Atividade2EFCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\igorm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

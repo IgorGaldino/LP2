@@ -6,32 +6,20 @@ namespace Atividade2EFCore
     public class ContaCorrente
     {
         public const double TAXA = 0.10;
-        public string titular = string.Empty;
 
         public ContaCorrente(){}
-        public ContaCorrente(string t)
+        public ContaCorrente(string t, Agencia a)
         {
-            this.titular = t;
+			Agencia = a;
+            Titular = t;
         }
 
-        //[Key]
         public int Id { get; set; }
         public double Saldo { get; set; }
-        public string Titular
-        {
-            get { return titular; }
-            set { titular = value; }
-        }
+        public string Titular{ get; set; }
 
-        public void depositar(double valor)
-        {
-            Saldo += valor - valor * TAXA;
-        }
+		public int AgenciaId { get; set; }
+		public Agencia Agencia { get; set; }
 
-        public void sacar(double valor)
-        {
-            if(valor <= Saldo)
-                Saldo -= valor - valor * TAXA;
-        }
     }
 }

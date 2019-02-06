@@ -59,7 +59,7 @@ namespace Atividade2EFCore.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Saldo = table.Column<double>(nullable: false),
                     Titular = table.Column<string>(nullable: true),
-                    AgenciaId = table.Column<int>(nullable: true)
+                    AgenciaId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -69,7 +69,7 @@ namespace Atividade2EFCore.Migrations
                         column: x => x.AgenciaId,
                         principalTable: "Agencias",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -82,7 +82,7 @@ namespace Atividade2EFCore.Migrations
                     DataAniversario = table.Column<DateTime>(nullable: false),
                     Saldo = table.Column<double>(nullable: false),
                     Titular = table.Column<string>(nullable: true),
-                    AgenciaId = table.Column<int>(nullable: true)
+                    AgenciaId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -92,7 +92,7 @@ namespace Atividade2EFCore.Migrations
                         column: x => x.AgenciaId,
                         principalTable: "Agencias",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -101,7 +101,7 @@ namespace Atividade2EFCore.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    AgenciaId = table.Column<int>(nullable: true)
+                    AgenciaId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -111,7 +111,7 @@ namespace Atividade2EFCore.Migrations
                         column: x => x.AgenciaId,
                         principalTable: "Agencias",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

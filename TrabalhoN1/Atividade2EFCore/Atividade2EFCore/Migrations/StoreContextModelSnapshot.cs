@@ -57,7 +57,7 @@ namespace Atividade2EFCore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("AgenciaId");
+                    b.Property<int>("AgenciaId");
 
                     b.Property<double>("Saldo");
 
@@ -75,7 +75,7 @@ namespace Atividade2EFCore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("AgenciaId");
+                    b.Property<int>("AgenciaId");
 
                     b.Property<DateTime>("DataAniversario");
 
@@ -97,7 +97,7 @@ namespace Atividade2EFCore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("AgenciaId");
+                    b.Property<int>("AgenciaId");
 
                     b.HasKey("Id");
 
@@ -116,23 +116,26 @@ namespace Atividade2EFCore.Migrations
 
             modelBuilder.Entity("Atividade2EFCore.ContaCorrente", b =>
                 {
-                    b.HasOne("Atividade2EFCore.Agencia")
+                    b.HasOne("Atividade2EFCore.Agencia", "Agencia")
                         .WithMany("ContasCorrente")
-                        .HasForeignKey("AgenciaId");
+                        .HasForeignKey("AgenciaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Atividade2EFCore.ContaPoupanca", b =>
                 {
-                    b.HasOne("Atividade2EFCore.Agencia")
+                    b.HasOne("Atividade2EFCore.Agencia", "Agencia")
                         .WithMany("ContasPoupanca")
-                        .HasForeignKey("AgenciaId");
+                        .HasForeignKey("AgenciaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Atividade2EFCore.Solicitacao", b =>
                 {
-                    b.HasOne("Atividade2EFCore.Agencia")
+                    b.HasOne("Atividade2EFCore.Agencia", "Agencia")
                         .WithMany("Solicitacoes")
-                        .HasForeignKey("AgenciaId");
+                        .HasForeignKey("AgenciaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

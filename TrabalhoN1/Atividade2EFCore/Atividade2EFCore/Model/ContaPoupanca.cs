@@ -6,47 +6,31 @@ namespace Atividade2EFCore
     public class ContaPoupanca
     {
 
-        private double taxaJuros;
-        private DateTime dataAniversario;
-        private string titular = string.Empty;
-
         public ContaPoupanca() {}
 
-        public ContaPoupanca(double j, DateTime d, string t)
+        public ContaPoupanca(double j, DateTime d, string t, Agencia a)
         {
-            this.titular = t;
-            taxaJuros = j;
-            dataAniversario = d;
+			Agencia = a;
+            Titular = t;
+            Juros = j;
+            DataAniversario = d;
         }
 
-        //[Key]
         public int Id { get; set; }
         public double Juros { get; set; }
         public DateTime DataAniversario { get; set; }
         public double Saldo { get; set; }
-        public string Titular
-        {
-            get { return titular; }
-            set { titular = value; }
-        }
+        public string Titular { get; set; }
 
-        public void depositar(double valor)
-        {
-            Saldo += valor;
-        }
-
-        public void sacar(double valor)
-        {
-            if (valor <= Saldo)
-                Saldo -= valor;
-        }
+		public int AgenciaId { get; set; }
+		public Agencia Agencia { get; set; }
 
         public void addRendimento()
         {
-            if (DateTime.Now.Equals(dataAniversario))
+            if (DateTime.Now.Equals(DataAniversario))
             {
-                double rendimento = Saldo * taxaJuros;
-                depositar(rendimento);
+                double rendimento = Saldo * Juros;
+				Saldo += rendimento;
             }
         }
     }

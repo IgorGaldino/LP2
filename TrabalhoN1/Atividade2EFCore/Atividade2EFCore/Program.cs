@@ -6,14 +6,8 @@ namespace Atividade2EFCore
 {
     class Program
     {
-        public const double JUROS = 0.6;
-
         static void Main(string[] args)
         {
-            int contCliente = 0;
-            int contCCorrente = 0;
-            int contCPoupanca = 0;
-            
             using (var db = new StoreContext())
             {
                 db.Set<Cliente>().RemoveRange(db.Clientes);
@@ -27,15 +21,9 @@ namespace Atividade2EFCore
                 Banco banco = new Banco();
                 db.Bancos.Add(banco);
                 db.SaveChanges();
-                /*
-                    db.Clientes.Add(new Cliente { Nome = "igor" });
-                    db.Clientes.Add(new Cliente { Nome = "Zé" });
-                    db.SaveChanges();
-                */
 
                 while (true)
                 {
-                    //banco.showIdAgencias();
                     menu();
                     int op = int.Parse(Console.ReadLine());
 
@@ -45,13 +33,13 @@ namespace Atividade2EFCore
                         agencia.Banco = banco;
                         db.Agencias.Add(agencia);  //add agência in banco
                         db.SaveChanges();
-                        banco.showIdAgencias();
-                        //banco.addAgencia(agencia);
+                        banco.findAllAgencia();
 
                     }
                     else if (op == 2)
                     {
-                        Console.WriteLine("Informe o número da agência: ");
+						banco.findAllAgencia();
+						Console.WriteLine("Informe o número da agência: ");
                         int numAgencia = int.Parse(Console.ReadLine());
                         Agencia agencia = banco.findAgencia(numAgencia);
 
@@ -62,33 +50,25 @@ namespace Atividade2EFCore
                         }
 
                         Cliente cliente = new Cliente();
-                        //cliente.Id = ++contCliente;
+                        
                         Console.WriteLine("Informe o nome do cliente: ");
-                        string nome = Console.ReadLine();
-                        cliente.Nome = nome;
+                        cliente.Nome = Console.ReadLine();
 
                         Console.WriteLine("Qual tipo de conta deseja criar:");
                         Console.WriteLine("1 - Corrente | 2 - Poupança");
                         int tipoConta = int.Parse(Console.ReadLine());
                         if (tipoConta == 1)
                         {
-                            cliente.Id = ++contCliente;
-                            db.Clientes.Add(cliente);   //add cliente in base
-                            ContaCorrente cc = new ContaCorrente(cliente.Nome);
-                            cc.Id = ++contCCorrente;
-                            db.ContasCorrente.Add(cc);  //add Conta Corrente in base
-                            agencia.addCCorrente(cc);
 
+                            db.Clientes.Add(cliente);   //add cliente in base
+                            ContaCorrente cc = new ContaCorrente(cliente.Nome, agencia);
+							var x = db.ContasCorrente.Add(cc);  //add Conta Corrente in base
                         }
                         else if (tipoConta == 2)
                         {
-                            cliente.Id = ++contCliente;
                             db.Clientes.Add(cliente);   //add cliente in base
-                            ContaPoupanca cp = new ContaPoupanca(JUROS, DateTime.Now, cliente.Nome);
-                            cp.Id = ++contCPoupanca;
+                            ContaPoupanca cp = new ContaPoupanca(JUROS, DateTime.Now, cliente.Nome, agencia);
                             db.ContasPoupanca.Add(cp);  //add Conta Poupança in base
-                            agencia.addCPoupanca(cp);
-
                         }
                     }
                     else if (op == 3)

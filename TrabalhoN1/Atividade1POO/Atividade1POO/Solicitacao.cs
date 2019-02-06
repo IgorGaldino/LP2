@@ -62,10 +62,8 @@ namespace Atividade1POO
                     Console.WriteLine("Informe o valor para deposito: ");
                     double valor = Double.Parse(Console.ReadLine());
 
-                    if (valor <= cc.Saldo)
-                        cc.depositar(valor);
-                    else
-                        Console.WriteLine("Saldo insuficiente");
+                    cc.depositar(valor);
+                    Console.WriteLine("Saldo insuficiente");
                 }
             }
             else if (tipoConta == 2)
@@ -101,10 +99,7 @@ namespace Atividade1POO
                     Console.WriteLine("Informe o valor para deposito: ");
                     double valor = Double.Parse(Console.ReadLine());
 
-                    if (valor <= cp.Saldo)
-                        cp.depositar(valor);
-                    else
-                        Console.WriteLine("Saldo insuficiente");
+					cp.depositar(valor);
                 }
             }
         }
