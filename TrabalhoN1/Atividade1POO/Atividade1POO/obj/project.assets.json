@@ -4658,11 +4658,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pichau\\Desktop\\Atividade1POO\\Atividade1POO\\Atividade1POO.csproj",
+      "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\LP2\\TrabalhoN1\\Atividade1POO\\Atividade1POO\\Atividade1POO.csproj",
       "projectName": "Atividade1POO",
-      "projectPath": "C:\\Users\\Pichau\\Desktop\\Atividade1POO\\Atividade1POO\\Atividade1POO.csproj",
+      "projectPath": "C:\\Users\\Pichau\\source\\repos\\LP2\\TrabalhoN1\\Atividade1POO\\Atividade1POO\\Atividade1POO.csproj",
       "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pichau\\Desktop\\Atividade1POO\\Atividade1POO\\obj\\",
+      "outputPath": "C:\\Users\\Pichau\\source\\repos\\LP2\\TrabalhoN1\\Atividade1POO\\Atividade1POO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

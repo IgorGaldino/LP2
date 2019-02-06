@@ -63,7 +63,6 @@ namespace Atividade1POO
                     double valor = Double.Parse(Console.ReadLine());
 
                     cc.depositar(valor);
-                    Console.WriteLine("Saldo insuficiente");
                 }
             }
             else if (tipoConta == 2)
