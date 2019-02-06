@@ -59,16 +59,22 @@ namespace Atividade2EFCore
 				try
 				{
 					var contas = db.Set<ContaCorrente>();
-					Console.WriteLine("\nContas Correntes\n");
+					Console.WriteLine(
+						"####################\n" +
+						"##Contas Correntes##\n" +
+						"####################\n");
 					foreach (var cc in contas)
 					{
-						Console.WriteLine("Número da conta: " + cc.Id + " Titular " + cc.Titular);
+						Console.WriteLine("Número da conta: " + cc.Id + " do Titular " + cc.Titular);
 					}
 					Console.WriteLine("");
 				}
 				catch (Exception)
 				{
-					Console.WriteLine("Nenhuma conta corrente cadastrada");
+					Console.WriteLine(
+						"*************************************\n" +
+						"**Nenhuma conta corrente cadastrada**\n" +
+						"*************************************\n");
 				}
 			}
 		}
@@ -97,16 +103,22 @@ namespace Atividade2EFCore
 				try
 				{
 					var contas = db.Set<ContaPoupanca>();
-					Console.WriteLine("\nContas Poupança\n");
+					Console.WriteLine(
+						"#####################\n" +
+						"##\nContas Poupança##\n" +
+						"#####################\n");
 					foreach (var cp in contas)
 					{
-						Console.WriteLine("Número da conta: " + cp.Id + " Titular " + cp.Titular);
+						Console.WriteLine("Número da conta: " + cp.Id + " do Titular " + cp.Titular);
 					}
 					Console.WriteLine("");
 				}
 				catch (Exception)
 				{
-					Console.WriteLine("Nenhuma conta poupança cadastrada");
+					Console.WriteLine(
+						"*************************************\n" +
+						"**Nenhuma conta poupança cadastrada**\n" +
+						"*************************************\n");
 				}
 			}
 		}

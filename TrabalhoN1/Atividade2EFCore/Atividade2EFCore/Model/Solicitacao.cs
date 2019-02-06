@@ -20,7 +20,10 @@ namespace Atividade2EFCore
 
 				if (agencia == null)
 				{
-					Console.WriteLine("Agência não existe!\n");
+					Console.WriteLine(
+								"**********************\n" +
+								"**Agência não existe**\n" +
+								"**********************\n");
 					return;
 				}
 
@@ -61,7 +64,10 @@ namespace Atividade2EFCore
 							if (valor <= cc.Saldo)
 								cc.Saldo -= valor;
 							else
-								Console.WriteLine("Saldo insuficiente");
+								Console.WriteLine(
+									"**********************\n" +
+									"**Saldo insuficiente**\n" +
+									"**********************\n");
 						}
 						else if (op == 3)
 						{
@@ -73,7 +79,10 @@ namespace Atividade2EFCore
 					}
 					catch
 					{
-						Console.WriteLine("Conta inválida!");
+						Console.WriteLine(
+							"******************\n" +
+							"**Conta inválida**\n" +
+							"******************\n");
 					}
 			}
 				else if (tipoConta == 2)
@@ -107,7 +116,10 @@ namespace Atividade2EFCore
 							if (valor <= cp.Saldo)
 								cp.Saldo -= valor;
 							else
-								Console.WriteLine("Saldo insuficiente");
+								Console.WriteLine(
+									"**********************\n" +
+									"**Saldo insuficiente**\n" +
+									"**********************\n");
 						}
 						else if (op == 3)
 						{
@@ -119,11 +131,15 @@ namespace Atividade2EFCore
 					}
 					catch
 					{
-						Console.WriteLine("Conta inválida!");
+						Console.WriteLine(
+									"******************\n" +
+									"**Conta inválida**\n" +
+									"******************\n");
 					}
 				}
-				db.SaveChanges();	//Save banco
+				db.SaveChanges();   //Save banco
+				Console.WriteLine("");
 			}
-        }
+        }	//Fim do método
     }
 }

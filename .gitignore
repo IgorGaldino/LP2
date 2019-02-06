@@ -2,6 +2,6 @@
 
 *bin/
 
-*Migration/
+*Migrations/
 
 banco.db

@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Atividade2EFCore.Model;
 
 namespace Atividade2EFCore
 {
     class Program
     {
+		const double JUROS = 0.6;
+
         static void Main(string[] args)
         {
+
             using (var db = new StoreContext())
             {
-                db.Set<Cliente>().RemoveRange(db.Clientes);
-                db.Set<Banco>().RemoveRange(db.Bancos);
-                db.Set<Agencia>().RemoveRange(db.Agencias);
-                db.Set<ContaCorrente>().RemoveRange(db.ContasCorrente);
-                db.Set<ContaPoupanca>().RemoveRange(db.ContasPoupanca);
-                db.Set<Solicitacao>().RemoveRange(db.Solicitacoes);
-                db.SaveChanges();
+				Banco banco = verificaBanco();
 
-                Banco banco = new Banco();
                 db.Bancos.Add(banco);
                 db.SaveChanges();
 
@@ -45,7 +42,10 @@ namespace Atividade2EFCore
 
                         if (agencia == null)
                         {
-                            Console.WriteLine("Agencia inválida! Tente novamente!\n");
+                            Console.WriteLine(
+								"*************************************\n" + 
+								"**Agencia inválida! Tente novamente**\n" +
+								"*************************************\n");
                             continue;
                         }
 
@@ -82,22 +82,42 @@ namespace Atividade2EFCore
                     }
                     else
                     {
-                        Console.WriteLine("Opção inválida, tente novamente");
+                        Console.WriteLine(
+							"***********************************\n" +
+							"**Opção inválida! Tente novamente**\n" +
+							"***********************************\n");
                     }
                     db.SaveChanges();
                 } //Fim do while
             }
         } //Fim da main
 
+
         public static void menu()
         {
             Console.WriteLine(
-                "##Sistema de Banco##\n\n" +
+				"\n\t##Sistema de Banco##\n\n" +
                 "1 - Cadastrar Agência\n" +
                 "2 - Criar Conta\n" +
                 "3 - Abrir uma Sessão\n" +
                 "4 - Encerrar programa\n"
             );
         }
+
+		public static Banco verificaBanco()
+		{
+			using (var db = new StoreContext())
+			{
+				try
+				{
+					return db.Bancos
+					.Single(b => b.Id == 1);
+				}
+				catch
+				{
+					return new Banco();
+				}
+			}
+		}
     }
 }

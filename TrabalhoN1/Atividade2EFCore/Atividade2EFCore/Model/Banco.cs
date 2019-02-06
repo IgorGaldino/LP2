@@ -14,11 +14,6 @@ namespace Atividade2EFCore
         public int Id { get; set; }
         public ICollection<Agencia> Agencias { get; set; }
 
-        public void addAgencia(Agencia a)
-        {
-            Console.WriteLine("Add Agência!");
-        }
-
         public Agencia findAgencia(int num)
         {
             using (var db = new StoreContext())
@@ -43,7 +38,10 @@ namespace Atividade2EFCore
 				try
 				{
 					var agencias = db.Set<Agencia>();
-					Console.WriteLine("\nLista das Agencias\n");
+					Console.WriteLine(
+						"######################\n" +
+						"##Lista das Agencias##\n" +
+						"######################\n");
 					foreach (var agencia in agencias)
 					{
 						Console.WriteLine("Agencia de número: " + agencia.Id);
