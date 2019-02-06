@@ -14,10 +14,11 @@ namespace Atividade2EFCore
 
             using (var db = new StoreContext())
             {
-				Banco banco = verificaBanco();
 
-                db.Bancos.Add(banco);
-                db.SaveChanges();
+				db.Set<Banco>().RemoveRange(db.Bancos);
+				Banco banco = new Banco();
+				db.Bancos.Add(banco);
+				db.SaveChanges();
 
                 while (true)
                 {
@@ -103,21 +104,22 @@ namespace Atividade2EFCore
                 "4 - Encerrar programa\n"
             );
         }
-
+		/*
 		public static Banco verificaBanco()
 		{
 			using (var db = new StoreContext())
 			{
 				try
 				{
-					return db.Bancos
-					.Single(b => b.Id == 1);
+					Console.WriteLine("Tentar");
+					var banco = db.Set<Banco>().First(b => b.Id == 1);					return banco;
 				}
 				catch
 				{
+					Console.WriteLine("N deu Tentar");
 					return new Banco();
 				}
 			}
-		}
+		}*/
     }
 }

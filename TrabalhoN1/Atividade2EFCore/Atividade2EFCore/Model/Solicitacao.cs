@@ -46,7 +46,8 @@ namespace Atividade2EFCore
 						Console.WriteLine(
 							"1 - Consultar Saldo\n" +
 							"2 - Sacar\n" +
-							"3 -  Depositar");
+							"3 - Depositar\n" +
+							"4 - Remover Conta");
 						int op = int.Parse(Console.ReadLine());
 
 						if (op == 1)
@@ -76,6 +77,23 @@ namespace Atividade2EFCore
 
 							cc.Saldo += valor;
 						}
+						else if (op == 4)
+						{
+							Console.WriteLine(
+								"******************************************\n" +
+								"**Realmente deseja remover a conta(s/n)?**\n" +
+								"******************************************\n");
+							string ex = Console.ReadLine();
+
+							if (ex == "s")
+							{
+								db.Remove(cc);
+								Console.WriteLine("Conta removida com sucesso!");
+							}
+							else
+								return;
+
+						}
 					}
 					catch
 					{
@@ -98,7 +116,8 @@ namespace Atividade2EFCore
 						Console.WriteLine(
 							"1 - Consultar Saldo\n" +
 							"2 - Sacar\n" +
-							"3 -  Depositar");
+							"3 - Depositar\n" +
+							"4 - Remover Conta");
 						int op = int.Parse(Console.ReadLine());
 
 						if (op == 1)
@@ -127,6 +146,23 @@ namespace Atividade2EFCore
 							double valor = Double.Parse(Console.ReadLine());
 
 							cp.Saldo += valor;
+						}
+						else if (op == 4)
+						{
+							Console.WriteLine(
+								"******************************************\n" +
+								"**Realmente deseja remover a conta(s/n)?**\n" +
+								"******************************************\n");
+							string ex = Console.ReadLine();
+
+							if (ex == "s")
+							{
+								db.Remove(cp);
+								Console.WriteLine("Conta removida com sucesso!");
+							}
+							else
+								return;
+
 						}
 					}
 					catch
